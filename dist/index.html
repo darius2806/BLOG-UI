@@ -17,23 +17,15 @@
   </head>
 
   <body class="bg-gray-100 overflow-x-hidden">
-    <!-- this is where NAVIGATION begins -->
-    <nav
-      class="flex bg-white justify-center items-center  p-4 lg:px-20 lg:py-8 relative z-50"
-    >
+    <!-- Navigation -->
+    <nav class="flex bg-white justify-center items-center p-4 lg:px-20 lg:py-8 relative z-50">
       <div class="text-xl lg:text-2xl italic font-bold text-gray-600">
         <h1 class="flex italic">
           News <span class="text-red-700">404</span>
         </h1>
       </div>
-
-      <div
-        id="menu"
-        class=" lg:flex gap-4 bg-white lg:static absolute left-0 min-h-[50vh] lg:min-h-fit w-full px-5 top-[-100%] transition-all duration-300 z-40"
-      >
-        <ul
-          class="flex  justify-end w-full flex-col lg:flex-row lg:gap-10 gap-8 py-14 lg:py-0 text-center "
-        >
+      <div id="menu" class="lg:flex gap-4 bg-white lg:static absolute left-0 min-h-[50vh] lg:min-h-fit w-full px-5 top-[-100%] transition-all duration-300 z-40">
+        <ul class="flex justify-end w-full flex-col lg:flex-row lg:gap-10 gap-8 py-14 lg:py-0 text-center">
           <li class="hover:text-green-300"><a href="#">Home</a></li>
           <li class="hover:text-green-300"><a href="#">Latest</a></li>
           <li class="hover:text-green-300"><a href="#">Sports</a></li>
@@ -42,77 +34,117 @@
           <li class="hover:text-green-300"><a href="#">Business</a></li>
         </ul>
       </div>
-
-      <!-- Hamburger icon -->
+      <!-- Hamburger -->
       <div class="lg:hidden flex">
         <button>
-          <ion-icon
-            onclick="menuHam(this)"
-            name="menu-outline"
-            class="text-3xl lg:text-5xl cursor-pointer"
-          ></ion-icon>
+          <ion-icon onclick="menuHam(this)" name="menu-outline" class="text-3xl lg:text-5xl cursor-pointer"></ion-icon>
         </button>
       </div>
     </nav>
 
-  <!-- news div starts here -->
-   <!-- this div holds the entire cards -->   <div class="mt-10 space-y-10"> 
-
-  <div class="flex justify-center text-center">
-    <h1 class="lg:text-3xl font-semibold px-2 lg:py-3 text-red-700">
-      News | <span class="text-slate-800">in pictures</span>
-    </h1>
-  </div>
-
-  <!-- News Cards Container  holds the samaller cards golding the news divs-->
-  <div class="flex flex-col lg:flex-row lg:justify-center lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0">
-    
-    <!-- Card 1 -->
-    <div class="flex flex-col items-center max-w-sm">
-      <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/514e/live/c6e29970-2d78-11f0-b26b-ab62c890638b.jpg.webp" alt="">
-      <p >
-        <em class="font-bold text-xl">Fashionistas and flippers: Africa's top shots</em>
-        <br><br>A selection of the week's best photos from across the African continent and beyond.
-      </p>
-     
-    </div>
-
-    <!-- Card 2 -->
-    <div class="flex flex-col max-w-sm">
-      <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/51ea/live/aa3c2900-2448-11f0-b26b-ab62c890638b.jpg.webp" alt="">
-      <p class="p-2">
-        <em class="font-bold text-xl">Spain and Portugal power chaos - in pictures</em>
-        <br><br>Photos show the disruption caused by power cuts that have affected large parts of Spain and Portugal.
-      </p>
-      
-    </div>
-
-    <!-- Card 3 -->
-    <div class="flex flex-col items-center  max-w-sm">
-      <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/e513/live/9a6f1610-2725-11f0-8f57-b7237f6a66e6.jpg.webp" alt="">
-      <p class="p-2">
-        <em class="font-bold text-xl">Riffs, rage and racers: Africa's top shots</em>
-        <br><br>A selection of the week's best photos from across the African continent and beyond.
-      </p>
-     
+    <!-- Main News Content -->
+    <div class="mt-10 space-y-10">
+      <div class="flex justify-center text-center">
+        <h1 class="lg:text-3xl font-semibold px-2 lg:py-3 text-red-700">
+          News | <span class="text-slate-800">in pictures</span>
+        </h1>
       </div>
 
+      <!-- Row 1 -->
+      <div class="flex flex-col lg:flex-row lg:justify-center lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0">
+        <div class="flex flex-col items-center max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/514e/live/c6e29970-2d78-11f0-b26b-ab62c890638b.jpg.webp" alt="">
+          <p>
+            <em class="font-bold text-xl">Fashionistas and flippers: Africa's top shots</em>
+            <br><br>A selection of the week's best photos from across the African continent and beyond.
+          </p>
+        </div>
+        <div class="flex flex-col max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/51ea/live/aa3c2900-2448-11f0-b26b-ab62c890638b.jpg.webp" alt="">
+          <p class="p-2">
+            <em class="font-bold text-xl">Spain and Portugal power chaos - in pictures</em>
+            <br><br>Photos show the disruption caused by power cuts that have affected large parts of Spain and Portugal.
+          </p>
+        </div>
+        <div class="flex flex-col items-center max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/e513/live/9a6f1610-2725-11f0-8f57-b7237f6a66e6.jpg.webp" alt="">
+          <p class="p-2">
+            <em class="font-bold text-xl">Riffs, rage and racers: Africa's top shots</em>
+            <br><br>A selection of the week's best photos from across the African continent and beyond.
+          </p>
+        </div>
+        <div class="flex flex-col max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://www.thefa.com/-/media/thefacom-new/images/rules-and-regulations/player-essentials/essentials-cover-2024-25-800x450.ashx?as=0&dmc=0&thn=0" alt="">
+          <p class="p-2">
+            <em class="font-bold text-xl">chelsea planning of hiring bigwan luther the 404 team player.</em>
+            <br><br>The 404 team of blockfuse labs jos are going viral for bringing up a powerful player.
+          </p>
+        </div>
+      </div>
 
-      <div class="flex flex-col max-w-sm">
-      <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/51ea/live/aa3c2900-2448-11f0-b26b-ab62c890638b.jpg.webp" alt="">
-      <p class="p-2">
-        <em class="font-bold text-xl">Spain and Portugal power chaos - in pictures</em>
-        <br><br>Photos show the disruption caused by power cuts that have affected large parts of Spain and Portugal.
-      </p>
-      
-    </div>
-    </div>
+      <!-- Row 2 -->
+      <div class="flex flex-col lg:flex-row lg:justify-center lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0">
+        <div class="flex flex-col items-center max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://www.naijanews.com/wp-content/uploads/2024/03/Jamb-UTM-CBT.jpg" alt="">
+          <p>
+            <em class="font-bold text-xl"> JAMB Takes Action After Massive Complaints On 2025 UTME Results In Nigeria</em>
+            <br><br>JAMB, in a statement on Monday by its spokesperson, Fabian Benjamin, said it is scrutinizing complaints received regarding the conduct and results of the 2025 UTME exercise.
+          </p>
+        </div>
+        <div class="flex flex-col max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://cdn.punchng.com/wp-content/uploads/2025/02/21122129/1639215678316blob.webp" alt="">
+          <p class="p-2">
+            <em class="font-bold text-xl">US shares Wigwe's helicopter crash report with FG</em>
+            <br><br>The Director-General of the Nigeria Safety and Investigation Bureau, Alex Badeh, has said that the United States .
+          </p>
+        </div>
+        <div class="flex flex-col items-center max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://www.russellwebster.com/wp-content/uploads/2024/10/ISS_25042_28282-shoplifting.jpg" alt="">
+          <p class="p-2">
+            <em class="font-bold text-xl">The latest (2024) crime trends</em>
+            <br><br>The Office for National Statistics finds notable increases in robbery, violence with injury and consumer and retail fraud in the year ending June 2024.
+          </p>
+        </div>
+        <div class="flex flex-col max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://lagosstreetartfestival.com/wp-content/uploads/2023/12/Public-Art-min.jpg" alt="">
+          <p class="p-2">
+            <em class="font-bold text-xl">Art in the Streets: Lagos</em>
+            <br><br>Capturing the energy of urban artists transforming Nigeria’s largest city.
+          </p>
+        </div>
+      </div>
 
-  </div>
-</div>
-
-
-      <!-- More rows can be added here -->
+      <!-- Row 3 -->
+      <div class="flex flex-col lg:flex-row lg:justify-center lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0">
+        <div class="flex flex-col items-center max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://media.cnn.com/api/v1/images/stellar/prod/2025-05-06t035921z-282999148-rc23ceat655f-rtrmadp-3-sudan-politics.JPG?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="">
+          <p>
+            <em class="font-bold text-xl">Drone strikes pound Port Sudan, putting aid deliveries at risk</em>
+            <br><br>Explosions and fires rocked Sudan’s main port city and wartime capital Port Sudan on Tuesday.          
+          </p>
+        </div>
+        <div class="flex flex-col max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://www.aljazeera.com/wp-content/uploads/2025/02/AP25041375282857-1739202750.jpg?resize=770%2C513&quality=80" alt="">
+          <p class="p-2">
+            <em class="font-bold text-xl">Did the US flinch first in tariff war with China</em>
+            <br><br>A high stakes game of chicken has come to an end for 90 days, as both China and the US claim the upper hand.
+          </p>
+        </div>
+        <div class="flex flex-col items-center max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://pynck.com/wp-content/uploads/2023/09/tokyo-fw-9-23-horizontal-image-jpg.jpeg" alt="">
+          <p class="p-2">
+            <em class="font-bold text-xl">Tokyo Fashion Week</em>
+            <br><br>Highlights from Japan’s innovative fashion scene.
+          </p>
+        </div>
+        <div class="flex flex-col max-w-sm">
+          <img class="w-full h-60 object-cover rounded" src="https://i.cbc.ca/1.7532715.1747072726!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/oak-hammock-marsh-fire.jpg?im=Resize%3D780" alt="">
+          <p class="p-2">
+            <em class="font-bold text-xl">Wildfires Threaten Canada</em>
+            <br><br>Striking photos show the scale and intensity of wildfires in the Canadian wilderness.
+          </p>
+        </div>
+      </div>
     </div>
 
     <script>
