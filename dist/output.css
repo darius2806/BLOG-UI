@@ -616,6 +616,14 @@ video {
   width: 100%;
 }
 
+.w-\[69\%\] {
+  width: 69%;
+}
+
+.w-\[75\%\] {
+  width: 75%;
+}
+
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -817,6 +825,16 @@ video {
 .text-slate-800 {
   --tw-text-opacity: 1;
   color: rgb(30 41 59 / var(--tw-text-opacity, 1));
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .transition-all {
