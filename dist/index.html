@@ -1,127 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLOG UI</title>
-    <link rel="stylesheet" href="/dist/output.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
 
-  <body class="bg-gray-100 overflow-x-hidden">
-    <!-- this is where NAVIGATION begins -->
-    <nav
-      class="flex bg-white justify-center items-center  p-4 lg:px-20 lg:py-8 relative z-50"
-    >
-      <div class="text-xl lg:text-2xl italic font-bold text-gray-600">
-        <h1 class="flex italic">
-          News <span class="text-red-700">404</span>
-        </h1>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLOG UI</title>
+  <link rel="stylesheet" href="/dist/output.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-      <div
-        id="menu"
-        class=" lg:flex gap-4 bg-white lg:static absolute left-0 min-h-[50vh] lg:min-h-fit w-full px-5 top-[-100%] transition-all duration-300 z-40"
-      >
-        <ul
-          class="flex  justify-end w-full flex-col lg:flex-row lg:gap-10 gap-8 py-14 lg:py-0 text-center "
-        >
-          <li class="hover:text-green-300"><a href="#">Home</a></li>
-          <li class="hover:text-green-300"><a href="#">Latest</a></li>
-          <li class="hover:text-green-300"><a href="#">Sports</a></li>
-          <li class="hover:text-green-300"><a href="#">Politics</a></li>
-          <li class="hover:text-green-300"><a href="#">Fashion</a></li>
-          <li class="hover:text-green-300"><a href="#">Business</a></li>
-        </ul>
-      </div>
+<body class="bg-gray-100 overflow-x-hidden">
+  <!-- this is where NAVIGATION begins -->
+  <nav class="flex bg-white justify-center items-center  p-4 lg:px-20 lg:py-8 relative z-50">
+    <div class="text-xl lg:text-2xl italic font-bold text-gray-600">
+      <h1 class="flex italic">
+        News <span class="text-red-700">404</span>
+      </h1>
+    </div>
 
-      <!-- Hamburger icon -->
-      <div class="lg:hidden flex">
-        <button>
-          <ion-icon
-            onclick="menuHam(this)"
-            name="menu-outline"
-            class="text-3xl lg:text-5xl cursor-pointer"
-          ></ion-icon>
-        </button>
-      </div>
-    </nav>
+    <div id="menu"
+      class=" lg:flex gap-4 bg-white lg:static absolute left-0 min-h-[50vh] lg:min-h-fit w-full px-5 top-[-100%] transition-all duration-300 z-40">
+      <ul class="flex  justify-end w-full flex-col lg:flex-row lg:gap-10 gap-8 py-14 lg:py-0 text-center ">
+        <li class="hover:text-green-300"><a href="#">Home</a></li>
+        <li class="hover:text-green-300"><a href="#">Latest</a></li>
+        <li class="hover:text-green-300"><a href="#">Sports</a></li>
+        <li class="hover:text-green-300"><a href="#">Politics</a></li>
+        <li class="hover:text-green-300"><a href="#">Fashion</a></li>
+        <li class="hover:text-green-300"><a href="#">Business</a></li>
+      </ul>
+    </div>
+
+    <!-- Hamburger icon -->
+    <div class="lg:hidden flex">
+      <button>
+        <ion-icon onclick="menuHam(this)" name="menu-outline" class="text-3xl lg:text-5xl cursor-pointer"></ion-icon>
+      </button>
+    </div>
+  </nav>
 
   <!-- news div starts here -->
-   <!-- this div holds the entire cards -->   <div class="mt-10 space-y-10"> 
+  <!-- this div holds the entire cards -->
+  <div class="mt-10 space-y-10">
 
-  <div class="flex justify-center text-center">
-    <h1 class="lg:text-3xl font-semibold px-2 lg:py-3 text-red-700">
-      News | <span class="text-slate-800">in pictures</span>
-    </h1>
-  </div>
-
-  <!-- News Cards Container  holds the samaller cards golding the news divs-->
-  <div class="flex flex-col lg:flex-row lg:justify-center lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0">
-    
-    <!-- Card 1 -->
-    <div class="flex flex-col items-center max-w-sm">
-      <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/514e/live/c6e29970-2d78-11f0-b26b-ab62c890638b.jpg.webp" alt="">
-      <p >
-        <em class="font-bold text-xl">Fashionistas and flippers: Africa's top shots</em>
-        <br><br>A selection of the week's best photos from across the African continent and beyond.
-      </p>
-     
+    <div class="flex justify-center text-center">
+      <h1 class="lg:text-3xl font-semibold px-2 lg:py-3 text-red-700">
+        News | <span class="text-slate-800">in pictures</span>
+      </h1>
     </div>
 
-    <!-- Card 2 -->
-    <div class="flex flex-col max-w-sm">
-      <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/51ea/live/aa3c2900-2448-11f0-b26b-ab62c890638b.jpg.webp" alt="">
-      <p class="p-2">
-        <em class="font-bold text-xl">Spain and Portugal power chaos - in pictures</em>
-        <br><br>Photos show the disruption caused by power cuts that have affected large parts of Spain and Portugal.
-      </p>
-      
-    </div>
+    <!-- News Cards Container  holds the samaller cards golding the news divs-->
+    <div
+      class="flex flex-col lg:flex-row lg:justify-center lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0">
 
-    <!-- Card 3 -->
-    <div class="flex flex-col items-center  max-w-sm">
-      <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/e513/live/9a6f1610-2725-11f0-8f57-b7237f6a66e6.jpg.webp" alt="">
-      <p class="p-2">
-        <em class="font-bold text-xl">Riffs, rage and racers: Africa's top shots</em>
-        <br><br>A selection of the week's best photos from across the African continent and beyond.
-      </p>
-     
+      <!-- Card 1 -->
+      <div class="flex flex-col items-center max-w-sm">
+        <img class="w-full h-60 object-cover rounded"
+          src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/514e/live/c6e29970-2d78-11f0-b26b-ab62c890638b.jpg.webp"
+          alt="">
+        <p>
+          <em class="font-bold text-xl">Fashionistas and flippers: Africa's top shots</em>
+          <br><br>A selection of the week's best photos from across the African continent and beyond.
+        </p>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex flex-col max-w-sm">
+        <img class="w-full h-60 object-cover rounded"
+          src="https://ichef.bbci.co.uk/news/480/cpsprodpb/51ea/live/aa3c2900-2448-11f0-b26b-ab62c890638b.jpg.webp"
+          alt="">
+        <p class="p-2">
+          <em class="font-bold text-xl">Spain and Portugal power chaos - in pictures</em>
+          <br><br>Photos show the disruption caused by power cuts that have affected large parts of Spain and Portugal.
+        </p>
+
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex flex-col items-center  max-w-sm">
+        <img class="w-full h-60 object-cover rounded"
+          src="https://ichef.bbci.co.uk/news/480/cpsprodpb/e513/live/9a6f1610-2725-11f0-8f57-b7237f6a66e6.jpg.webp"
+          alt="">
+        <p class="p-2">
+          <em class="font-bold text-xl">Riffs, rage and racers: Africa's top shots</em>
+          <br><br>A selection of the week's best photos from across the African continent and beyond.
+        </p>
+
       </div>
 
 
       <div class="flex flex-col max-w-sm">
-      <img class="w-full h-60 object-cover rounded" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/51ea/live/aa3c2900-2448-11f0-b26b-ab62c890638b.jpg.webp" alt="">
-      <p class="p-2">
-        <em class="font-bold text-xl">Spain and Portugal power chaos - in pictures</em>
-        <br><br>Photos show the disruption caused by power cuts that have affected large parts of Spain and Portugal.
-      </p>
-      
-    </div>
+        <img class="w-full h-60 object-cover rounded"
+          src="https://ichef.bbci.co.uk/news/480/cpsprodpb/51ea/live/aa3c2900-2448-11f0-b26b-ab62c890638b.jpg.webp"
+          alt="">
+        <p class="p-2">
+          <em class="font-bold text-xl">Spain and Portugal power chaos - in pictures</em>
+          <br><br>Photos show the disruption caused by power cuts that have affected large parts of Spain and Portugal.
+        </p>
+
+      </div>
     </div>
 
   </div>
-</div>
+  </div>
 
 
-      <!-- More rows can be added here -->
+
+  <!-- More rows can be added here -->
+  </div>
+  <!--footer-->
+  <footer class="bg-gray-900 text-gray-300 px-4 sm:px-6 py-10 mt-10">
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-8">
+
+      <!-- Logo/Brand -->
+      <div>
+        <p class="text-2xl font-bold text-[#4b5563]">NEWS<em class="text-[#b91c1c]">@404</em></p>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="flex flex-col sm:flex-row gap-4 text-sm text-center sm:text-left">
+        <li><a href="#" class="hover:underline hover:text-white">Home</a></li>
+        <li><a href="#" class="hover:underline hover:text-white">Latest</a></li>
+        <li><a href="#" class="hover:underline hover:text-white">About</a></li>
+        <li><a href="#" class="hover:underline hover:text-white">Blog</a></li>
+      </ul>
     </div>
 
-    <script>
-      function menuHam(e) {
-        e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
-        const navMenu = document.getElementById("menu");
-        navMenu.classList.toggle("top-[9%]");
-        navMenu.classList.toggle("top-[-100%]");
-      }
-    </script>
-  </body>
+    <!-- Divider -->
+    <div class="border-t border-gray-700 my-6"></div>
+
+    <!-- Social & Legal -->
+    <div
+      class="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-6 text-sm text-center sm:text-left">
+
+      <!-- Social Media Icons -->
+      <div class="flex justify-center lg:justify-start gap-4 w-full lg:w-auto">
+        <a href="#" class="hover:text-white"><ion-icon name="logo-facebook" class="text-xl"></ion-icon></a>
+        <a href="#" class="hover:text-white"><ion-icon name="logo-twitter" class="text-xl"></ion-icon></a>
+        <a href="#" class="hover:text-white"><ion-icon name="logo-instagram" class="text-xl"></ion-icon></a>
+        <a href="#" class="hover:text-white"><ion-icon name="logo-linkedin" class="text-xl"></ion-icon></a>
+        <a href="#" class="hover:text-white"><ion-icon name="logo-youtube" class="text-xl"></ion-icon></a>
+      </div>
+
+      <!-- Legal Info -->
+      <div class="text-center lg:text-right w-full lg:w-auto">
+        <p>© 2023 NEWS@404. All rights reserved.</p>
+        <p>Designed by <a href="#" class="hover:underline">404</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer ends here -->
+  <script>
+    function menuHam(e) {
+      e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+      const navMenu = document.getElementById("menu");
+      navMenu.classList.toggle("top-[9%]");
+      navMenu.classList.toggle("top-[-100%]");
+    }
+  </script>
+</body>
+
 </html>
