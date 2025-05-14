@@ -8,24 +8,206 @@
 </head>
 <body>
    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hamburg</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
+    
+        <!-- Nav -->
 
-    <h1 class="bg-red-500">hello</h1>
+        <nav class="flex justify-between bg-white lg:flex lg:gap-[900px] p-4 lg:px-20 items-center lg:py-8">
+    
+            <div class="text-2xl lg:text-6xl text-gray-600">
+                <span>NEWS<em>@404</em></span>
+            </div>
+    
+            <div id="menu" class=" lg:text-2xl lg:flex gap-4 bg-white lg:static absolute left-0 min-h-[50vh] lg:min-h-fit w-full px-5 top-[-100%]">
+                <ul class=" duration-300 flex flex-col lg:flex-row lg:gap-[4vw] gap-8 py-14 lg:py-0 text-center">
+                    <li class="hover:text-green-300"><a href="">Home</a></li>
+                    <li class="hover:text-green-300"><a href="">Latest</a></li>
+                    <li class="hover:text-green-300"><a href="">About</a></li>
+                    <li class="hover:text-green-300"><a href="">Blog</a></li>
+                </ul>
+            </div>
+    
+            <div class="lg:hidden flex">
+                <button><ion-icon onclick="menuHam(this)" name="menu-outline" class=" text-3xl lg:text-5xl cursor-pointer"></ion-icon></button>
+            </div>
+        </nav><br>
+
+        <!-- CONTENT -->
+
+
+        <!-- ROW1 -->
+
+        <div class=" flex-col flex lg:flex-row gap-16 lg:px-20 items-center">
+
+            <!-- News1 -->
+
+            
+                <div class="">
+                <div><h1 class=" lg:text-3xl font-semibold px-2 lg:py-3 lg:p-0 text-red-700">Latest News</h1></div>
+                <img class="w-fit lg:w-[850px]" src="https://www.investors.com/wp-content/uploads/2022/06/Stock-cargoShip-container-adobe.jpg" alt="">
+                <p class="w-fit p-2 lg:p-0 lg:w-[850px]"> <em class="font-semibold lg:text-2xl">Title:  <span> Shipping Stocks Are Big Winners From U.S.-China Deal - Investor's Business Daily </span></em> 
+                    
+                    <br> <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     A reprehenderit recusandae deserunt perspiciatis ipsum explicabo architecto 
+                     quibusdam, animi repudiandae excepturi, laborum consectetur
+                     beatae. Deleniti minus amet, labore itaque doloremque voluptatum.</p>
+                     <br>
+                     
+                     <div class="px-2 lg:p-0">
+                        <button class="bg-green-500 w-full p-1 lg:px-2 lg:w-fit "><a class=" lg:text-2xl" href=""><em>Read more</em></a></button>
+                     </div>
+                </div>
+
+            <!-- New2 -->
+
+                <div class="">
+                    <div><h1 class=" lg:text-3xl font-semibold px-2 lg:p-0 lg:py-3 text-gray-100">Ignore this guy!!!!!</h1></div>
+                <img class="w-fit lg:w-[850px]" src="https://www.investors.com/wp-content/uploads/2022/06/Stock-cargoShip-container-adobe.jpg" alt="">
+                <p class="w-fit p-2 lg:p-0 lg:w-[850px]"> <em class="font-semibold lg:text-2xl">Title:  <span> Shipping Stocks Are Big Winners From U.S.-China Deal - Investor's Business Daily </span></em> 
+                    
+                    <br> <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     A reprehenderit recusandae deserunt perspiciatis ipsum explicabo architecto 
+                     quibusdam, animi repudiandae excepturi, laborum consectetur
+                     beatae. Deleniti minus amet, labore itaque doloremque voluptatum.</p>
+                     <br>
+                     
+
+                     <div class="p-2 lg:p-0 ">
+                        <button class="bg-green-500 w-full lg:w-fit p-1 lg:px-2"><a class=" lg:text-2xl" href=""><em>Read more</em></a></button>
+                     </div>
+                     
+                </div>
+
+        </div>
+        <br><br><br><br>
+
+        <!-- ROW2 -->
+
+
+        <div class=" flex-col flex lg:flex-row gap-16 lg:px-20 items-center">
+
+            <!-- News3 -->
+
+            
+                <div class="">
+                
+                <img class="w-fit lg:w-[850px]" src="https://www.investors.com/wp-content/uploads/2022/06/Stock-cargoShip-container-adobe.jpg" alt="">
+                <p class="w-fit p-2 lg:p-0 lg:w-[850px]"> <em class="font-semibold lg:text-2xl">Title:  <span> Shipping Stocks Are Big Winners From U.S.-China Deal - Investor's Business Daily </span></em> 
+                    
+                    <br> <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     A reprehenderit recusandae deserunt perspiciatis ipsum explicabo architecto 
+                     quibusdam, animi repudiandae excepturi, laborum consectetur
+                     beatae. Deleniti minus amet, labore itaque doloremque voluptatum.</p>
+                     <br>
+                     
+                     <div class="px-2 lg:p-0">
+                        <button class="bg-green-500 w-full p-1 lg:px-2 lg:w-fit "><a class=" lg:text-2xl" href=""><em>Read more</em></a></button>
+                     </div>
+                </div>
+
+            <!-- New4 -->
+
+                <div class="">
+                   
+                <img class="w-fit lg:w-[850px]" src="https://www.investors.com/wp-content/uploads/2022/06/Stock-cargoShip-container-adobe.jpg" alt="">
+                <p class="w-fit p-2 lg:p-0 lg:w-[850px]"> <em class="font-semibold lg:text-2xl">Title:  <span> Shipping Stocks Are Big Winners From U.S.-China Deal - Investor's Business Daily </span></em> 
+                    
+                    <br> <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     A reprehenderit recusandae deserunt perspiciatis ipsum explicabo architecto 
+                     quibusdam, animi repudiandae excepturi, laborum consectetur
+                     beatae. Deleniti minus amet, labore itaque doloremque voluptatum.</p>
+                     <br>
+                     
+
+                     <div class="p-2 lg:p-0 ">
+                        <button class="bg-green-500 w-full lg:w-fit p-1 lg:px-2"><a class=" lg:text-2xl" href=""><em>Read more</em></a></button>
+                     </div>
+                     
+                </div>
+
+        </div>
+        <br><br><br><br>
+
+        <!-- ROW2 -->
+
+
+        <div class=" flex-col flex lg:flex-row gap-16 lg:px-20 items-center">
+
+            <!-- News3 -->
+
+            
+                <div class="">
+                
+                <img class="w-fit lg:w-[850px]" src="https://www.investors.com/wp-content/uploads/2022/06/Stock-cargoShip-container-adobe.jpg" alt="">
+                <p class="w-fit p-2 lg:p-0 lg:w-[850px]"> <em class="font-semibold lg:text-2xl">Title:  <span> Shipping Stocks Are Big Winners From U.S.-China Deal - Investor's Business Daily </span></em> 
+                    
+                    <br> <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     A reprehenderit recusandae deserunt perspiciatis ipsum explicabo architecto 
+                     quibusdam, animi repudiandae excepturi, laborum consectetur
+                     beatae. Deleniti minus amet, labore itaque doloremque voluptatum.</p>
+                     <br>
+                     
+                     <div class="px-2 lg:p-0">
+                        <button class="bg-green-500 w-full p-1 lg:px-2 lg:w-fit "><a class=" lg:text-2xl" href=""><em>Read more</em></a></button>
+                     </div>
+                </div>
+
+            <!-- New4 -->
+
+                <div class="">
+                   
+                <img class="w-fit lg:w-[850px]" src="https://www.investors.com/wp-content/uploads/2022/06/Stock-cargoShip-container-adobe.jpg" alt="">
+                <p class="w-fit p-2 lg:p-0 lg:w-[850px]"> <em class="font-semibold lg:text-2xl">Title:  <span> Shipping Stocks Are Big Winners From U.S.-China Deal - Investor's Business Daily </span></em> 
+                    
+                    <br> <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     A reprehenderit recusandae deserunt perspiciatis ipsum explicabo architecto 
+                     quibusdam, animi repudiandae excepturi, laborum consectetur
+                     beatae. Deleniti minus amet, labore itaque doloremque voluptatum.</p>
+                     <br>
+                     
+
+                     <div class="p-2 lg:p-0 ">
+                        <button class="bg-green-500 w-full lg:w-fit p-1 lg:px-2"><a class=" lg:text-2xl" href=""><em>Read more</em></a></button>
+                     </div>
+                     
+                </div>
+
+        </div>
+    
+        <script>
+    
+            function menuHam(e){
+    
+                e.name = e.name === 'menu-outline' ? 'close-outline' : 'menu-outline';
+                
+                let navMenu = document.getElementById('menu');
+    
+                navMenu.classList.toggle('top-[9%]');
+                navMenu.classList.toggle('top-[-100]');
+               
+                
+            }
+    
+        </script>
+    </body>
+    </html>
+    
+    
+    
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
+    
 </body>
 </html>
