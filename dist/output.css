@@ -596,10 +596,12 @@ video {
   margin-top: 2.5rem;
 }
 
+
+
 .mb-4 {
   margin-bottom: 1rem;
 }
-
+ main
 .flex {
   display: flex;
 }
@@ -684,6 +686,10 @@ video {
   gap: 2rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -712,11 +718,15 @@ video {
   border-top-width: 1px;
 }
 
+ luther
+.border-gray-400 {
+  
 .border-b-2 {
   border-bottom-width: 2px;
 }
 
 .border-gray-700 {
+main
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity, 1));
 }
