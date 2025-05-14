@@ -1,10 +1,12 @@
-function menuHam(e) {
-  const menuIcon = document.getElementById("menu-icon");
-  e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
-  menuIcon.name =
-    menuIcon.name === "menu-outline" ? "close-outline" : "menu-outline";
+function toggleMenu() {
+  const menu = document.getElementById("mobile-menu");
+  const icon = document.getElementById("menu-icon");
 
-  const navMenu = document.getElementById("menu");
-  navMenu.classList.toggle("top-[9%]");
-  navMenu.classList.toggle("top-[-100%]");
+  if (menu.classList.contains("hidden")) {
+    menu.classList.remove("hidden");
+    icon.setAttribute("name", "close-outline");
+  } else {
+    menu.classList.add("hidden");
+    icon.setAttribute("name", "menu-outline");
+  }
 }
