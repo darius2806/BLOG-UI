@@ -1,75 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>404News</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-
-  <body class="bg-gray-50 min-h-screen flex flex-col">
-    <!-- The nav bar starts here -->
-    <nav
-      class="bg-slate-50 text-red-700 shadow-sm sticky top-0 z-50 border-b border-gray-300"
-    >
-      <div
-        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
-      >
-        <a href="#" class="text-2xl font-extrabold text-red-600 tracking-wide"
-          >News<span class="text-gray-800">404</span></a
-        >
-
-        <ul class="hidden md:flex space-x-10 font-semibold text-slate-900">
-          <li><a href="#" class="hover:text-red-800 transition">Home</a></li>
-          <li><a href="#" class="hover:text-red-800 transition">Latest</a></li>
-          <li><a href="#" class="hover:text-red-800 transition">Sports</a></li>
-          <li>
-            <a href="#" class="hover:text-red-800 transition">Politics</a>
-          </li>
-          <li><a href="#" class="hover:text-red-800 transition">Fashion</a></li>
-          <li>
-            <a href="#" class="hover:text-red-800 transition">Business</a>
-          </li>
-        </ul>
-
-        <!-- burger for Mobile -->
-        <button
-          id="menu-btn"
-          class="md:hidden text-gray-700 focus:outline-none"
-        >
-          <ion-icon name="menu-outline" class="text-3xl"></ion-icon>
-        </button>
-      </div>
-
-      <!-- Mobile t0ggle Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-white border-t border-gray-200 text-slate-900"
-      >
-        <ul
-          class="flex flex-col space-y-3 px-6 py-4 font-semibold text-gray-700 items-center text-center"
-        >
-          <li><a href="#" class="hover:text-red-800 transition">Home</a></li>
-          <li><a href="#" class="hover:text-red-800 transition">Latest</a></li>
-          <li><a href="#" class="hover:text-red-800 transition">Sports</a></li>
-          <li>
-            <a href="#" class="hover:text-red-800 transition">Politics</a>
-          </li>
-          <li><a href="#" class="hover:text-red-800 transition">Fashion</a></li>
-          <li>
-            <a href="#" class="hover:text-red-800 transition">Business</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News 404 - Clean Blog UI</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- NAVIGATION -->
+  <nav class="bg-slate-50 text-red-700 shadow-sm sticky top-0 z-50 border-b border-gray-300" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#" class="text-2xl font-extrabold text-red-600 tracking-wide">News<span class="text-gray-800">404</span></a>
+      <!-- Nav links -->
+      <ul class="hidden md:flex space-x-10 font-semibold text-slate-900">
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Home</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Latest</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Sports</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Politics</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Fashion</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Business</a></li>
+      </ul>
+      <!-- Hamburger for Mobile Responsiveness -->
+      <input type="checkbox" id="menu-toggle" class="hidden" />
+      <label for="menu-toggle" class="md:hidden text-gray-700 focus:outline-none cursor-pointer" aria-label="Toggle mobile menu">
+        <ion-icon name="menu-outline" class="text-3xl"></ion-icon>
+      </label>
+    </div>
+    <!-- Mobile Responsiveness -->
+    <div id="mobile-menu" class="hidden peer-checked:block md:hidden bg-white border-t border-gray-200 text-slate-900">
+      <ul class="flex flex-col space-y-3 px-6 py-4 font-semibold text-gray-700">
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Home</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Latest</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Sports</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Politics</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Fashion</a></li>
+        <li><a href="#" class="hover:text-red-800 focus:text-red-800 transition focus:outline-none focus:ring-2 focus:ring-red-500">Business</a></li>
+      </ul>
+    </div>
+  </nav>
 
     <!-- body carrying th cards-->
     <main class="flex-grow max-w-7xl mx-auto px-6 py-10">
