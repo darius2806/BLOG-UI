@@ -1,6 +1,6 @@
 function toggleMenu() {
-  const menu = document.getElementById("mobile-menu");
-  const icon = document.getElementById("menu-icon");
+  let menu = document.getElementById("mobile-menu");
+  let icon = document.getElementById("menu-icon");
 
   if (menu.classList.contains("hidden")) {
     menu.classList.remove("hidden");
@@ -14,11 +14,11 @@ function toggleMenu() {
 
 document.querySelectorAll('#button').forEach((button, index) => {
   button.addEventListener('click', function () {
-    const messageInput = document.querySelectorAll('#message')[index]; 
-    const message = messageInput.value;
-    const submitDiv = document.querySelectorAll('#submit')[index]; 
+    let messageInput = document.querySelectorAll('#message')[index]; 
+    let message = messageInput.value;
+    let submitDiv = document.querySelectorAll('#submit')[index]; 
     if (message.trim() !== '') {
-      const p = document.createElement('p');
+      let p = document.createElement('p');
       p.className = 'mt-2 text-start break-words';
       p.textContent = message;
       submitDiv.appendChild(p);
