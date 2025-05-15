@@ -3,368 +3,221 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BLOG UI</title>
-  <link rel="stylesheet" href="/dist/output.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clean Blog UI</title>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="min-h-screen flex flex-col bg-gray-100 overflow-x-hidden">
- 
-  <!-- this is where NAVIGATION begins -->
-<nav class="flex text-white bg-gray-800 justify-between items-center p-4 lg:px-20 lg:py-6 relative z-50">
-  <!-- Logo -->
-  <div class="text-2xl italic font-bold text-red-600">
-    News <span class="text-white">404</span>
-  </div>
+<body class="bg-gray-50 min-h-screen flex flex-col">
 
-  <!-- Desktop Menu -->
-  <ul class="hidden lg:flex gap-10 text-xl">
-    <li class="hover:text-green-300"><a href="#">Home</a></li>
-    <li class="hover:text-green-300"><a href="#">Latest</a></li>
-    <li class="hover:text-green-300"><a href="#">Sports</a></li>
-    <li class="hover:text-green-300"><a href="#">Politics</a></li>
-    <li class="hover:text-green-300"><a href="#">Fashion</a></li>
-    <li class="hover:text-green-300"><a href="#">Business</a></li>
-  </ul>
+  <!-- NAVIGATION -->
+  <nav class="bg-slate-50 text-red-700 shadow-sm sticky top-0 z-50  border-b border-gray-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#" class="text-2xl font-extrabold text-red-600 tracking-wide">News<span class="text-gray-800">404</span></a>
 
-  <!-- Hamburger Button -->
-  <button class="lg:hidden text-3xl" onclick="toggleMenu()" aria-label="Toggle menu">
-    <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
-  </button>
+      <ul class="hidden md:flex space-x-10 font-semibold text-slate-900">
+        <li><a href="#" class="hover:text-red-800 transition">Home</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Latest</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Sports</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Politics</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Fashion</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Business</a></li>
+      </ul>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu"
-       class="lg:hidden absolute top-full left-0 w-full bg-gray-800 text-white text-xl flex flex-col items-center text-center gap-6 py6 px-5 transition-all duration-300">
-    <a href="#" class="block hover:text-green-300">Home</a>
-    <a href="#" class="block hover:text-green-300">Latest</a>
-    <a href="#" class="block hover:text-green-300">Sports</a>
-    <a href="#" class="block hover:text-green-300">Politics</a>
-    <a href="#" class="block hover:text-green-300">Fashion</a>
-    <a href="#" class="block hover:text-green-300">Business</a>
-  </div>
-</nav>
-
- 
- 
- 
- 
-  <!-- news div starts here -->
-  <!-- this div holds the entire cards -->
-   <div
-
-   class="mt-10 space-y-10">
-<div>
-    <div class="flex justify-center text-center">
-      <h1 class="lg:text-3xl font-semibold px-2 lg:py-3 text-red-700">
-        News | <span class="text-slate-800">in pictures</span>
-      </h1>
+      <!-- Hamburger for Mobile -->
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        <ion-icon name="menu-outline" class="text-3xl"></ion-icon>
+      </button>
     </div>
- <div class="flex flex-col bg-white border-gray-400 p-5 shadow-md rounded-lg items-center space-y-4 max-w-sm">
-        <img class="w-full h-60 object-cover rounded"
-    <!-- News Cards Container  holds the smaller cards holding the news divs-->
-<div>
-    <class
-      class="flex flex-col lg:flex-row lg:justify-center lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0">
 
-      <!-- Card 1 -->
-      
-      <div class="flex flex-col bg-white border-gray-400 p-5 shadow-md rounded-lg items-center  space-y-4  max-w-sm transition duration-150 ease-in-out transform hover:scale-105">
-        <img class="w-full h-60 object-cover rounded "
-             main
-          src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/514e/live/c6e29970-2d78-11f0-b26b-ab62c890638b.jpg.webp"
-          alt="Africa's top shots">
-        
-        <p>
-          <em class="font-bold text-xl">Fashionistas and flippers: Africa's top shots</em><br><br>
-          A selection of the week's best photos from across the African continent and beyond.
-        </p><br><br>
-      
-        <!-- COMMENT FIELD -->
-        <div class="gap-2 lg:flex">
-          <input id="message" type="text" class="border-gray-500 border-2 p-2 text-gray-900" placeholder="Leave a comment">
-          <input id="button" type="button" value="Submit"
-            class="bg-red-800 text-white p-2 py-1 w-[268px] lg:w-fit rounded-b-md lg:rounded-b-none lg:rounded-r-md relative lg:right-1 h-11">
-        </div><br>
-      
-        <div class="w-full mt-6">
-          <h1 class="text-2xl font-semibold lg:text-3xl mb-4 text-center">Comments</h1>
-          <div id="submit">
-            
-          </div>
-        </div>
-      </div>
-      
-
-      <!-- Card 2 -->
-
-      <div class="flex flex-col bg-white  p-5 shadow-md rounded-lg items-center mb-4 space-y-4  max-w-sm transition duration-150 ease-in-out transform hover:scale-105">
-        <img class="w-full h-60 object-cover rounded "
-          src="https://ichef.bbci.co.uk/news/480/cpsprodpb/51ea/live/aa3c2900-2448-11f0-b26b-ab62c890638b.jpg.webp"
-          alt="">
-        <p class="p-2">
-          <em class="font-bold text-xl">Spain and Portugal power chaos - in pictures</em>
-          <br><br>Photos show the disruption caused by power cuts that have affected large parts of Spain and Portugal.
-        </p> <br><br>
-
-        <!-- COMMENT FIELD -->
-        <div class="gap-2 lg:flex">
-          <input id="message" type="text" class="border-gray-500 border-2 p-2 text-gray-900" placeholder="Leave a comment">
-          <input id="button" type="button" value="Submit"
-            class="bg-red-800 text-white p-2 py-1 w-[268px] lg:w-fit rounded-b-md lg:rounded-b-none lg:rounded-r-md relative lg:right-1 h-11">
-        </div><br>
-      
-        <div class="w-full mt-6">
-          <h1 class="text-2xl font-semibold lg:text-3xl mb-4 text-center">Comments</h1>
-          <div id="submit">
-            
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="flex flex-col bg-white border-gray-400 p-5 shadow-md rounded-lg items-center space-y-4 max-w-sm">
-=======
-      <div class="flex flex-col items-center bg-white p-5 shadow-md rounded-lg  mb-4 space-y-4 max-w-sm transition duration-150 ease-in-out transform hover:scale-105">
-
-        <img class="w-full h-60 object-cover rounded"
-          src="https://ichef.bbci.co.uk/news/480/cpsprodpb/e513/live/9a6f1610-2725-11f0-8f57-b7237f6a66e6.jpg.webp"
-          alt="">
-        <p class="p-2">
-          <em class="font-bold text-xl">Riffs, rage and racers: Africa's top shots</em>
-          <br><br>A selection of the week's best photos from across the African continent and beyond.
-        </p><br>
-
-        <!-- COMMENT FIELD -->
-        <div class="gap-2 lg:flex">
-          <input id="message" type="text" class="border-gray-500 border-2 p-2 text-gray-900" placeholder="Leave a comment">
-          <input id="button" type="button" value="Submit"
-            class="bg-red-800 text-white p-2 py-1 w-[268px] lg:w-fit rounded-b-md lg:rounded-b-none lg:rounded-r-md relative lg:right-1 h-11">
-        </div><br>
-      
-        <div class="w-full mt-6">
-          <h1 class="text-2xl font-semibold lg:text-3xl mb-4 text-center">Comments</h1>
-          <div id="submit">
-            
-          </div>
-        </div>
-      </div>
-
-      </class>
-      <!-- end of first major card -->
-
-
-<div class="flex flex-col lg:flex-row lg:justify-center mt-10 lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0 ">
-  <div class="flex flex-col p-5  space-y-4   items-center max-w-sm rounded-lg shadow-md">
-</div>
-<div class="flex flex-col lg:flex-row lg:justify-center mt-10 lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0">
-  <div class="flex flex-col p-5  space-y-4   items-center max-w-sm rounded-lg shadow-md transition duration-150 ease-in-out transform hover:scale-105">
-
-    <img class="w-full h-60 object-cover rounded" src="https://media.cnn.com/api/v1/images/stellar/prod/2025-05-06t035921z-282999148-rc23ceat655f-rtrmadp-3-sudan-politics.JPG?c=16x9&q=h_653,w_1160,c_fill/f_webp" alt="">
-    <p>
-      <em class="font-bold text-xl">Drone strikes pound Port Sudan, putting aid deliveries at risk</em>
-      <br><br>Explosions and fires rocked Sudan’s main port city and wartime capital Port Sudan on Tuesday.          
-    </p><br>
-     <!-- COMMENT FIELD -->
-     <div class="gap-2 lg:flex">
-      <input id="message" type="text" class="border-gray-500 border-2 p-2 text-gray-900" placeholder="Leave a comment">
-      <input id="button" type="button" value="Submit"
-        class="bg-red-800 text-white p-2 py-1 w-[268px] lg:w-fit rounded-b-md lg:rounded-b-none lg:rounded-r-md relative lg:right-1 h-11">
-    </div><br>
-  
-    <div class="w-full mt-6">
-      <h1 class="text-2xl font-semibold lg:text-3xl mb-4 text-center">Comments</h1>
-      <div id="submit">
-        
-      </div>
-    </div>
-  </div>
-
-  
-  <div class="flex flex-col p-5 space-y-4  max-w-sm rounded-lg shadow-md">
-  <div class="flex flex-col p-5 space-y-4  max-w-sm rounded-lg shadow-md transition duration-150 ease-in-out transform hover:scale-105">
-    main
-    <img class="w-full h-60 object-cover rounded" src="https://www.aljazeera.com/wp-content/uploads/2025/02/AP25041375282857-1739202750.jpg?resize=770%2C513&quality=80" alt="">
-    <p class="p-2">
-      <em class="font-bold text-xl">Did the US flinch first in tariff war with China</em>
-      <br><br>A high stakes game of chicken has come to an end for 90 days, as both China and the US claim the upper hand.
-    </p><br>
- <!-- COMMENT FIELD -->
- <div class="gap-2 lg:flex">
-  <input id="message" type="text" class="border-gray-500 border-2 p-2 text-gray-900" placeholder="Leave a comment">
-  <input id="button" type="button" value="Submit"
-    class="bg-red-800 text-white p-2 py-1 w-[268px] lg:w-fit rounded-b-md lg:rounded-b-none lg:rounded-r-md relative lg:right-1 h-11">
-</div><br>
-
-<div class="w-full mt-6">
-  <h1 class="text-2xl font-semibold lg:text-3xl mb-4 text-center">Comments</h1>
-  <div id="submit">
-    
-  </div>
-
-</div>
-</div>
-
-
-
-  <div class="flex flex-col space-y-4   items-center max-w-sm rounded-lg shadow-md">
-  <div class="flex flex-col space-y-4   items-center max-w-sm rounded-lg shadow-md transition duration-150 ease-in-out transform hover:scale-105">
-
-    <img class="w-full h-60 object-cover rounded" src="https://pynck.com/wp-content/uploads/2023/09/tokyo-fw-9-23-horizontal-image-jpg.jpeg" alt="">
-    <p class="p-2">
-      <em class="font-bold text-xl">Tokyo Fashion Week</em>
-      <br><br>Highlights from Japan’s innovative fashion scene.
-    </p><br>
-
-    <!-- COMMENT FIELD -->
-    <div class="gap-2 lg:flex text-center">
-      <input id="message" type="text" class="border-gray-500 border-2 p-2 text-gray-900" placeholder="Leave a comment">
-      <input id="button" type="button" value="Submit"
-        class="bg-red-800 text-white p-2 py-1 w-[268px] lg:w-fit rounded-b-md lg:rounded-b-none lg:rounded-r-md relative lg:right-1 h-11">
-    </div><br><br>
-  
-    <div class="w-full mt-6">
-      <h1 class="text-2xl font-semibold lg:text-3xl mb-4 text-center">Comments</h1>
-      <div id="submit">
-        
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- end of second major div -->
-
-<div class="flex flex-col lg:flex-row lg:justify-center mt-10 lg:gap-10 items-stretch px-4 lg:px-20 space-y-10 lg:space-y-0 ">
-  <div class="flex flex-col items-center max-w-sm rounded-lg shadow-md p-5 transition duration-150 ease-in-out transform hover:scale-105">
-    <img class="w-full h-60 object-cover rounded" src="https://www.naijanews.com/wp-content/uploads/2024/03/Jamb-UTM-CBT.jpg" alt="">
-    <p>
-      <em class="font-bold text-xl"> JAMB Takes Action After Massive Complaints On 2025 UTME Results In Nigeria</em>
-      <br><br>JAMB, in a statement on Monday by its spokesperson, Fabian Benjamin, said it is scrutinizing complaints received regarding the conduct and results of the 2025 UTME exercise.
-    </p><br><br>
-<!-- COMMENT FIELD -->
-<div class="gap-2 lg:flex mt-10">
-  <input id="message" type="text" class="border-gray-500 border-2 p-2 text-gray-900" placeholder="Leave a comment">
-  <input id="button" type="button" value="Submit"
-    class="bg-red-800 text-white p-2 py-1 w-[268px] lg:w-fit rounded-b-md lg:rounded-b-none lg:rounded-r-md relative lg:right-1 h-11">
-</div><br><br>
-
-<div class="w-full mt-10">
-  <h1 class="text-2xl font-semibold lg:text-3xl mb-4 text-center">Comments</h1>
-  <div id="submit">
-    
-  </div>
-
-</div>
-</div>
-
-
-  <div class="flex flex-col max-w-sm rounded-lg shadow-md p-5">
-  <div class="flex flex-col max-w-sm rounded-lg shadow-md p-5 transition duration-150 ease-in-out transform hover:scale-105">
-    <img class="w-full h-60 object-cover rounded" src="https://cdn.punchng.com/wp-content/uploads/2025/02/21122129/1639215678316blob.webp" alt="">
-    <p class="p-2">
-      <em class="font-bold text-xl">US shares Wigwe's helicopter crash report with FG</em>
-      <br><br>The Director-General of the Nigeria Safety and Investigation Bureau, Alex Badeh, has said that the United States .
-    </p><br><br>
-
-   <!-- COMMENT FIELD -->
-   <div class="gap-2 lg:flex mt-10">
-    <input id="message" type="text" class="border-gray-500 border-2 p-2 text-gray-900" placeholder="Leave a comment">
-    <input id="button" type="button" value="Submit"
-      class="bg-red-800 text-white p-2 py-1 w-[268px] lg:w-fit rounded-b-md lg:rounded-b-none lg:rounded-r-md relative lg:right-1 h-11">
-  </div><br><br>
-
-  <div class="w-full mt-10">
-    <h1 class="text-2xl font-semibold lg:text-3xl mb-4 text-center">Comments</h1>
-    <div id="submit">
-      
-    </div>
-  </div>
-</div>
-
-
-  <div class="flex flex-col items-center max-w-sm rounded-lg shadow-md p-5">
-  <div class="flex flex-col items-center max-w-sm rounded-lg shadow-md p-5 transition duration-150 ease-in-out transform hover:scale-105">
-    <img class="w-full h-60 object-cover rounded" src="https://www.russellwebster.com/wp-content/uploads/2024/10/ISS_25042_28282-shoplifting.jpg" alt="">
-    <p class="p-2">
-      <em class="font-bold text-xl">The latest (2024) crime trends</em>
-      <br><br>The Office for National Statistics finds notable increases in robbery, violence with injury and consumer and retail fraud in the year ending June 2024.
-    </p><br><br>
-
-<!-- COMMENT FIELD -->
-<div class="gap-2 lg:flex mt-10">
-  <input id="message" type="text" class="border-gray-500 border-2 p-2 text-gray-900" placeholder="Leave a comment">
-  <input id="button" type="button" value="Submit"
-    class="bg-red-800 text-white p-2 py-1 w-[268px] lg:w-fit rounded-b-md lg:rounded-b-none lg:rounded-r-md relative lg:right-1 h-11">
-</div><br><br>
-
-<div class="w-full mt-10">
-  <h1 class="text-2xl font-semibold lg:text-3xl mb-4 text-center">Comments</h1>
-  <div id="submit">
-    
-  </div>
-</div>
-</div>
-
-</div>
-  </div>
-  </div>
-
-  
-
-
-
-
-
-
-
-  <!--footer-->
-  <footer class="bg-gray-900 text-gray-300 px-4 sm:px-6 py-10 mt-10">
-    <div class="w-[69%] mx-auto flex flex-col lg:flex-row justify-between items-start gap-8">
-
-      <!-- Logo/Brand -->
-      <div>
-        <p class="text-2xl italic font-bold text-red-600">NEWS<em class="text-white">404</em></p>
-      </div>
-
-      <!-- Navigation Links -->
-      <ul class="flex flex-col sm:flex-row gap-4 text-xl text-center sm:text-left">
-        <li><a href="#" class="hover:underline hover:text-white">Home</a></li>
-        <li><a href="#" class="hover:underline hover:text-white">Latest</a></li>
-        <li><a href="#" class="hover:underline hover:text-white">About</a></li>
-        <li><a href="#" class="hover:underline hover:text-white">Blog</a></li>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 text-slate-900">
+      <ul class="flex flex-col space-y-3 px-6 py-4 font-semibold text-gray-700">
+        <li><a href="#" class="hover:text-red-800 transition">Home</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Latest</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Sports</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Politics</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Fashion</a></li>
+        <li><a href="#" class="hover:text-red-800 transition">Business</a></li>
       </ul>
     </div>
+  </nav>
 
-    <!-- Divider -->
-    <div class="border-t border-gray-700 my-6"></div>
+  <!-- MAIN -->
+  <main class="flex-grow max-w-7xl mx-auto px-6 py-10">
 
-    <!-- Social & Legal -->
+    <h1 class="text-4xl font-bold text-center text-red-600 mb-14 tracking-wide">News <span class="text-gray-900">in Pictures</span></h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Card Template -->
+      <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center ">
+        <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/514e/live/c6e29970-2d78-11f0-b26b-ab62c890638b.jpg.webp"
+          alt="Africa's top shots" class="w-full h-48 object-cover" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-semibold text-xl text-gray-900 mb-3">Fashionistas and Flippers: Africa's Top Shots</h2>
+          <p class="text-gray-700 flex-grow">A selection of the week's best photos from across the African continent and beyond.</p>
+
+          <form class="mt-6 flex space-x-3">
+            <input type="text" placeholder="Leave a comment"
+              class="flex-grow border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
+            <button type="submit"
+              class="bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition">Submit</button>
+          </form>
+
+          <section class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Comments</h3>
+            <div id="submit-1" class="text-gray-600 italic text-sm">No comments yet.</div>
+          </section>
+        </div>
+      </article>
+
+      <!-- Copy the card above and update content for each -->
+
+      <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/51ea/live/aa3c2900-2448-11f0-b26b-ab62c890638b.jpg.webp"
+          alt="Spain and Portugal power chaos" class="w-full h-48 object-cover" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-semibold text-xl text-gray-900 mb-3">Spain and Portugal Power Chaos - In Pictures</h2>
+          <p class="text-gray-700 flex-grow">Photos show the disruption caused by power cuts that have affected large parts of Spain and Portugal.</p>
+
+          <form class="mt-6 flex space-x-3">
+            <input type="text" placeholder="Leave a comment"
+              class="flex-grow border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
+            <button type="submit"
+              class="bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition">Submit</button>
+          </form>
+
+          <section class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Comments</h3>
+            <div id="submit-2" class="text-gray-600 italic text-sm">No comments yet.</div>
+          </section>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/e513/live/9a6f1610-2725-11f0-8f57-b7237f6a66e6.jpg.webp"
+          alt="Riffs, rage and racers" class="w-full h-48 object-cover" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-semibold text-xl text-gray-900 mb-3">Riffs, Rage and Racers: Africa's Top Shots</h2>
+          <p class="text-gray-700 flex-grow">A selection of the week's best photos from across the African continent and beyond.</p>
+
+          <form class="mt-6 flex space-x-3">
+            <input type="text" placeholder="Leave a comment"
+              class="flex-grow border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
+            <button type="submit"
+              class="bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition">Submit</button>
+          </form>
+
+          <section class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Comments</h3>
+            <div id="submit-3" class="text-gray-600 italic text-sm">No comments yet.</div>
+          </section>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center">
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/2025-05-06t035921z-282999148-rc23ceat655f-rtrmadp-3-sudan-politics.JPG?c=16x9&q=h_653,w_1160,c_fill/f_webp"
+          alt="Drone strikes pound Port Sudan" class="w-full h-48 object-cover" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-semibold text-xl text-gray-900 mb-3">Drone Strikes Pound Port Sudan, Putting Aid Deliveries at Risk</h2>
+          <p class="text-gray-700 flex-grow">Ongoing drone attacks in Sudan threaten humanitarian aid deliveries in the region.</p>
+
+          <form class="mt-6 flex space-x-3">
+            <input type="text" placeholder="Leave a comment"
+              class="flex-grow border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
+            <button type="submit"
+              class="bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition">Submit</button>
+          </form>
+
+          <section class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Comments</h3>
+            <div id="submit-4" class="text-gray-600 italic text-sm">No comments yet.</div>
+          </section>
+        </div>
+      </article>
+
+       <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center">
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/2025-05-06t035921z-282999148-rc23ceat655f-rtrmadp-3-sudan-politics.JPG?c=16x9&q=h_653,w_1160,c_fill/f_webp"
+          alt="Drone strikes pound Port Sudan" class="w-full h-48 object-cover" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-semibold text-xl text-gray-900 mb-3">Drone Strikes Pound Port Sudan, Putting Aid Deliveries at Risk</h2>
+          <p class="text-gray-700 flex-grow">Ongoing drone attacks in Sudan threaten humanitarian aid deliveries in the region.</p>
+
+          <form class="mt-6 flex space-x-3">
+            <input type="text" placeholder="Leave a comment"
+              class="flex-grow border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
+            <button type="submit"
+              class="bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition">Submit</button>
+          </form>
+
+          <section class="mt-6 flex flex-col items-center justify-center">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Comments</h3>
+            <div id="submit-4" class="text-gray-600 italic text-sm">No comments yet.</div>
+          </section>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/e513/live/9a6f1610-2725-11f0-8f57-b7237f6a66e6.jpg.webp"
+          alt="From Nigeria to Iraq" class="w-full h-48 object-cover" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-semibold text-xl text-gray-900 mb-3">From Nigeria to Iraq, It’s Girls’ Sports – Not War – That Dominate the Headlines</h2>
+          <p class="text-gray-700 flex-grow">Girls and women around the world are breaking barriers in sport despite many challenges.</p>
+
+          <form class="mt-6 flex space-x-3">
+            <input type="text" placeholder="Leave a comment"
+              class="flex-grow border border-gray-300 rounded-md px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
+            <button type="submit"
+              class="bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition">Submit</button>
+          </form>
+
+          <section class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Comments</h3>
+            <div id="submit-5" class="text-gray-600 italic text-sm">No comments yet.</div>
+          </section>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+    <!--footer-->
+  <footer class="bg-slate-50 text-gray-300 px-4 sm:px-6 py-10 mt-10 border-t border-gray-300">
+    <div class="w-[69%] mx-auto flex flex-col lg:flex-row justify-between items-start gap-8">
+
+    </div>
+
+  
+
     <div
-      class="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-6 text-sm text-center sm:text-left">
+      class="  max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-6 text-sm text-center sm:text-left">
 
       <!-- Social Media Icons -->
       <div class="flex  justify-center lg:justify-start gap-4 w-full lg:w-auto">
-        <a href="#" class="hover:text-white"><ion-icon name="logo-facebook" class="text-xl"></ion-icon></a>
-        <a href="#" class="hover:text-white"><ion-icon name="logo-twitter" class="text-xl"></ion-icon></a>
-        <a href="#" class="hover:text-white"><ion-icon name="logo-instagram" class="text-xl"></ion-icon></a>
-        <a href="#" class="hover:text-white"><ion-icon name="logo-linkedin" class="text-xl"></ion-icon></a>
-        <a href="#" class="hover:text-white"><ion-icon name="logo-youtube" class="text-xl"></ion-icon></a>
+        <a href="#" class="hover:text-red-800"><ion-icon name="logo-facebook" class="text-xl text-red-500"></ion-icon></a>
+        <a href="#" class="hover:text-red-800"><ion-icon name="logo-twitter" class="text-xl  text-red-500"></ion-icon></a>
+        <a href="#" class="hover:text-red-800"><ion-icon name="logo-instagram" class="text-xl  text-red-500"></ion-icon></a>
+        <a href="#" class="hover:text-red-800"><ion-icon name="logo-youtube" class="text-xl  text-red-500"></ion-icon></a>
       </div>
 
       <!-- Legal Info -->
-      <div class="text-center flex lg:text-right w-full lg:w-auto">
-        <p>© 2025 NEWS@404. All rights reserved.</p>
+      <div class="text-center flex lg:text-right w-full lg:w-auto  text-red-500">
         <p>Designed by <a href="#" class="hover:underline">404</a></p>
       </div>
     </div>
   </footer>
-  <!-- Footer ends here -->
+
+
+
+
   <script src="script.js">
- 
+   
+   
   </script>
+
 </body>
 
 </html>
